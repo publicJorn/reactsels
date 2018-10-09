@@ -1,0 +1,50 @@
+.Nav {
+  position: relative;
+  background-color: rgb(30, 33, 38);
+}
+
+.Nav-Logo {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  margin-top: -20px;
+  height: 40px;
+  animation: Nav-Logo-spin infinite 20s linear;
+}
+
+.Nav-Items {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.Nav-Item {
+  padding: 1rem 0.5rem;
+}
+
+.Nav-Link,
+.Nav-Link:active,
+.Nav-Link:visited {
+  padding: 1rem 0;
+  color: rgb(161, 169, 184);
+}
+
+.Nav-Link:hover,
+.Nav-Link:focus {
+  color: hotpink;
+}
+
+.Nav-Link.--active {
+  color: #61dafb;
+}
+
+@keyframes Nav-Logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

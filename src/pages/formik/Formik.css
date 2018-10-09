@@ -1,0 +1,17 @@
+.Formik-Wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.Formik-Field {
+  margin-bottom: 1rem;
+}
+
+.Formik-Label {
+  display: block;
+}
+
+.Formik-Error {
+  color: crimson;
+}

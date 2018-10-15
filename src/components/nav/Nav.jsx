@@ -22,6 +22,10 @@ export default (props) => {
         <li className="Nav-Item">
           <NavLink to="/formik">Forms with Formik</NavLink>
         </li>
+
+        <li className="Nav-Item">
+          <NavLink to="/pure-unpure">Pure or Unpure</NavLink>
+        </li>
       </ul>
     </nav>
   )

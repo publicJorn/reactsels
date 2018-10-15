@@ -1,0 +1,16 @@
+.Field {
+  position: relative;
+  overflow: hidden;
+}
+
+.One {
+  background-color: sandybrown;
+}
+
+.Two {
+  background-color: darkslategray;
+}
+
+.Three {
+  background-color: seagreen;
+}

@@ -4,7 +4,13 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 // Note that utils exposes a number of separatly imported files
 import { Loader } from './utils'
 
-// FEATURE: code-splitting
+/**
+ * FEATURE: code-splitting
+ * Note: splitting with `lazy` only supports components
+ * Alternatives:
+ * - (components AND libraries) https://www.smooth-code.com/open-source/loadable-components/
+ * - (anything but libraries)   https://github.com/jamiebuilds/react-loadable
+ */
 const Home = lazy(() => new Promise((resolve) => {
   // Setting extra long delay so we see <Loader />
   setTimeout(() => import('./pages/home/Home').then((c) => resolve(c)), 2000)

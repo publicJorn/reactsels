@@ -14,6 +14,7 @@ const Button = ({ onClick, clickedTimes }) => (
 )
 
 export default class extends Component {
+  // Use class props to define state instead of this.props in constructor
   state = {
     clicked: 0
   }

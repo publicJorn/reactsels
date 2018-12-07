@@ -1,6 +1,7 @@
 import React, { Component, Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
+// Note that utils exposes a number of separatly imported files
 import { Loader } from './utils'
 
 // FEATURE: code-splitting

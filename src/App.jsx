@@ -1,11 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component, Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Async from 'react-code-splitting'
+
+import { Loader } from './utils'
 
 // FEATURE: code-splitting
-const Home = () => <Async load={import('./pages/home/Home')} />
-const Formik = () => <Async load={import('./pages/formik/Formik')} />
-const PureUnpure = () => <Async load={import('./pages/pure-unpure/PureUnpure')} />
+const Home = lazy(() => new Promise((resolve) => {
+  // Setting extra long delay so we see <Loader />
+  setTimeout(() => import('./pages/home/Home').then((c) => resolve(c)), 2000)
+}))
+const Formik = lazy(() => import('./pages/formik/Formik'))
+const PureUnpure = lazy(() => import('./pages/pure-unpure/PureUnpure'))
 
 class App extends Component {
   render() {
@@ -14,9 +18,11 @@ class App extends Component {
       // Also see `components/nav`
       <Router>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/formik" component={Formik} />
-          <Route path="/pure-unpure" component={PureUnpure} />
+          <Suspense fallback={<Loader delay={1000} />}>
+            <Route exact path="/" component={Home} />
+            <Route path="/formik" component={Formik} />
+            <Route path="/pure-unpure" component={PureUnpure} />
+          </Suspense>
         </Switch>
       </Router>
     )

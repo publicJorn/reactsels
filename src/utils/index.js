@@ -4,12 +4,12 @@
  *
  * Alltogether exposes:
  * {
- *   util1,
+ *   Loader,
  *   util2,
  *   util3,
  * }
  */
-export { default as util1 } from './util1'
+export { default as Loader } from './Loader'
 export * from './moreUtils'
 
 

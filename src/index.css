@@ -5,7 +5,15 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 
   color: rgb(161, 169, 184);
   background-color: rgb(36, 39, 46);

@@ -17,6 +17,7 @@ const Home = lazy(() => new Promise((resolve) => {
 }))
 const Formik = lazy(() => import('./pages/formik/Formik'))
 const PureUnpure = lazy(() => import('./pages/pure-unpure/PureUnpure'))
+const Lists = lazy(() => import('./pages/lists/Lists'))
 
 class App extends Component {
   render() {
@@ -29,6 +30,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/formik" component={Formik} />
             <Route path="/pure-unpure" component={PureUnpure} />
+            <Route path="/lists" component={Lists} />
           </Suspense>
         </Switch>
       </Router>

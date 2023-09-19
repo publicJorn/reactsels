@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 
 import Nav from '../../components/nav/Nav'
 import ColorToggle from './ColorToggle'

@@ -26,6 +26,9 @@ export default (props) => {
         <li className="Nav-Item">
           <NavLink to="/pure-unpure">Pure or Unpure</NavLink>
         </li>
+
+        <li className="Nav-Items">
+          <NavLink to="/lists">Lists</NavLink></li>
       </ul>
     </nav>
   )
